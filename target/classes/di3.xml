@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car" class="com.kosta.mavenApp.section2.Car"
+	p:model="그랜저" p:price="5000" p:color="black"/>
+	
+	<bean id="person" class="com.kosta.mavenApp.section2.Person"
+	p:name="홍길동" p:phone="010-1234-1234" p:car-ref="car"/>
+	
+	<bean id="person2" class="com.kosta.mavenApp.section2.Person"
+	p:name="홍길동" p:phone="010-1234-1234" autowire="byName" scope="singleton"/> <!-- 이름이 같으면 넣어라 == byName -->
+	
+	<bean id="person3" class="com.kosta.mavenApp.section2.Person"
+	p:name="홍길동" p:phone="010-1234-1234" autowire="byType" scope="prototype"/> <!-- 타입이 같으면 넣어라 == byType -> 이클립스에서 property파일들이 모두 출력됨 이렇게 사용하지 않을 것이기 때문에 지금은 신경쓰지 말것-->
+	
+</beans>

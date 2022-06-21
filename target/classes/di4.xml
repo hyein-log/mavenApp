@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- @component, @Service, @controller를 찾는다. -->
+<!-- base-package 밑에 스캔하기 원하는 경로를 쓰고 com만 써서 com 파일 밑에 있는 모든 파일을 스캔할 수도 있고, 콤마를 써서 아예 다른 폴더 경로를 쓸 수도 있음 -->
+<context:component-scan base-package="com.kosta.mavenApp , org.kosta.mavenApp"></context:component-scan>
+
+</beans>
