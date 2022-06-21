@@ -11,7 +11,7 @@ import com.kosta.model.util.*;
 // ����� -> controller --> service --> DAO -> DB
 //		<-			  <--		  <--	  <-
 
-@Service("eservice")
+@Service
 public class EMPService {
 	@Autowired //타입이 같으면 자동으로 injection함
 	EMPDAO empDAO ;

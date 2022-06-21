@@ -21,7 +21,7 @@ public class DBUsingTest {
 //			System.out.println(b);
 //		}
 		
-		EMPService service2 = ctx.getBean("eservice", EMPService.class);
+		EMPService service2 = ctx.getBean("EMPService", EMPService.class);
 		List<EMPVO> elist = service2.selectAll();
 		for(EMPVO e : elist) {
 			System.out.println(e);
